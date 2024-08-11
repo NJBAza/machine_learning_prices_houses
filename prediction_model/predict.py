@@ -9,7 +9,10 @@ PACKAGE_ROOT = Path(os.path.abspath(os.path.dirname(__file__)))
 sys.path.append(str(PACKAGE_ROOT.parent))
 
 from prediction_model.config import config
-from prediction_model.processing.data_handling import load_pipeline
+from prediction_model.processing.data_handling import (
+    load_dataset,
+    load_pipeline,
+)
 
 classification_pipeline = load_pipeline(config.MODEL_NAME)
 
@@ -58,5 +61,5 @@ def predictions(data_input):
 #     return print(output)
 
 
-if __name__ == "__main__":
-    predictions()
+# if __name__ == "__main__":
+#     predictions()

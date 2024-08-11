@@ -12,6 +12,8 @@ sys.path.append(str(PACKAGE_ROOT.parent))
 import prediction_model.processing.preprocessing as pp
 from prediction_model.config import config
 
+RANDOM_SEED = 20230916
+
 classification_pipeline = Pipeline(
     [
         (
@@ -88,7 +90,14 @@ classification_pipeline = Pipeline(
         ),
         (
             "XGBoost",
-            XGBClassifier(random_state=16),
+            XGBClassifier(
+                reg_lambda=0.01,
+                reg_alpha=0.1,
+                n_estimators=300,
+                max_depth=5,
+                learning_rate=0.1,
+                random_state=RANDOM_SEED,
+            ),
         ),
     ]
 )
