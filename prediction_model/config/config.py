@@ -16,6 +16,10 @@ SAVE_MODEL_PATH = os.path.join(PACKAGE_ROOT, "trained_models")
 TARGET = "priceRange"
 MAP = {"250000-350000": 1, "350000-450000": 2, "450000-650000": 3, "650000+": 4, "0-250000": 0}
 
+# loading the original features
+with open(os.path.join(DATAPATH, "ORIGINAL_FEATURES"), "rb") as fp:
+    ORIGINAL_FEATURES = pickle.load(fp)
+
 # loading the conversion dict
 with open(os.path.join(DATAPATH, "CONVERSION_DICT"), "rb") as fp:
     CONVERSION_DICT = pickle.load(fp)
@@ -45,9 +49,14 @@ with open(os.path.join(DATAPATH, "NUMERICAL_FEATURES_WINSOR"), "rb") as fp:
     NUMERICAL_FEATURES_WINSOR = pickle.load(fp)
 
 # loading the numerical features
+with open(os.path.join(DATAPATH, "GEOLOCATION_0"), "rb") as fp:
+    GEOLOCATION_0 = pickle.load(fp)
+
+# loading the numerical features
 with open(os.path.join(DATAPATH, "GEOLOCATION"), "rb") as fp:
     GEOLOCATION = pickle.load(fp)
 
+print(GEOLOCATION_0, GEOLOCATION)
 # loading the description feature
 with open(os.path.join(DATAPATH, "DESCRIPTION_FEATURE"), "rb") as fp:
     DESCRIPTION_FEATURE = pickle.load(fp)
@@ -59,3 +68,5 @@ with open(os.path.join(DATAPATH, "BLACK_LIST"), "rb") as fp:
 # loading the removing words
 with open(os.path.join(DATAPATH, "TO_REMOVE"), "rb") as fp:
     TO_REMOVE = pickle.load(fp)
+
+print(CATEGORICAL_FEATURES)

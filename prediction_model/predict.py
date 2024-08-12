@@ -17,6 +17,7 @@ from prediction_model.processing.data_handling import (
 classification_pipeline = load_pipeline(config.MODEL_NAME)
 
 
+# For a unique case
 def predictions(data_input):
     data = pd.DataFrame(data_input)
     FEATURES = list(data.columns)
@@ -39,6 +40,7 @@ def predictions(data_input):
     return result
 
 
+# # For a complete dataset-batch case
 # def predictions():
 #     test_data = load_dataset(config.TEST_FILE)
 #     FEATURES = list(test_data.columns)

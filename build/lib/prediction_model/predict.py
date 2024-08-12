@@ -9,11 +9,15 @@ PACKAGE_ROOT = Path(os.path.abspath(os.path.dirname(__file__)))
 sys.path.append(str(PACKAGE_ROOT.parent))
 
 from prediction_model.config import config
-from prediction_model.processing.data_handling import load_pipeline
+from prediction_model.processing.data_handling import (
+    load_dataset,
+    load_pipeline,
+)
 
 classification_pipeline = load_pipeline(config.MODEL_NAME)
 
 
+# For a unique case
 def predictions(data_input):
     data = pd.DataFrame(data_input)
     FEATURES = list(data.columns)
@@ -36,6 +40,7 @@ def predictions(data_input):
     return result
 
 
+# # For a complete dataset-batch case
 # def predictions():
 #     test_data = load_dataset(config.TEST_FILE)
 #     FEATURES = list(test_data.columns)
@@ -58,5 +63,5 @@ def predictions(data_input):
 #     return print(output)
 
 
-if __name__ == "__main__":
-    predictions()
+# if __name__ == "__main__":
+#     predictions()
