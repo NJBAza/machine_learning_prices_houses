@@ -56,7 +56,6 @@ with open(os.path.join(DATAPATH, "GEOLOCATION_0"), "rb") as fp:
 with open(os.path.join(DATAPATH, "GEOLOCATION"), "rb") as fp:
     GEOLOCATION = pickle.load(fp)
 
-print(GEOLOCATION_0, GEOLOCATION)
 # loading the description feature
 with open(os.path.join(DATAPATH, "DESCRIPTION_FEATURE"), "rb") as fp:
     DESCRIPTION_FEATURE = pickle.load(fp)
@@ -68,5 +67,3 @@ with open(os.path.join(DATAPATH, "BLACK_LIST"), "rb") as fp:
 # loading the removing words
 with open(os.path.join(DATAPATH, "TO_REMOVE"), "rb") as fp:
     TO_REMOVE = pickle.load(fp)
-
-print(CATEGORICAL_FEATURES)
