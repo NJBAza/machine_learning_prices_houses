@@ -18,6 +18,7 @@ prediction_model/data/CATEGORICAL_DROP
 prediction_model/data/CATEGORICAL_FEAT
 prediction_model/data/CATEGORICAL_FEATURES
 prediction_model/data/CONVERSION_DICT
+prediction_model/data/CONVERSION_DICT2
 prediction_model/data/DESCRIPTION_FEATURE
 prediction_model/data/FEATURES_MODIFY
 prediction_model/data/GEOLOCATION
@@ -27,9 +28,12 @@ prediction_model/data/NUMERICAL_FEATURES
 prediction_model/data/NUMERICAL_FEATURES_WINSOR
 prediction_model/data/ORIGINAL_FEATURES
 prediction_model/data/TO_CONVERT
+prediction_model/data/TO_CONVERT2
 prediction_model/data/TO_REMOVE
 prediction_model/data/VARIABLES_TO_DROP
 prediction_model/data/__init__.py
+prediction_model/data/datasets
+prediction_model/data/original_data.csv
 prediction_model/data/test.csv
 prediction_model/data/train.csv
 prediction_model/processing/__init__.py
